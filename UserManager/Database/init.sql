@@ -1,0 +1,12 @@
+DROP TYPE IF EXISTS "ROLE";
+CREATE TYPE "ROLE" AS ENUM('admin', 'user', 'guest');
+CREATE TABLE IF NOT EXISTS "Users" (
+    "id" SERIAL PRIMARY KEY,
+    "fullname" TEXT NOT NULL,
+    "age" INT NOT NULL,
+    "email" TEXT NOT NULL UNIQUE,
+    "password" TEXT NOT NULL,
+    "role" "ROLE" NOT NULL,
+    "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    "updated_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

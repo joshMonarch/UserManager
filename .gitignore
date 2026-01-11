@@ -1,13 +1,11 @@
 # .gitignore
 # Ignore node modules
 node_modules/
-# Ignore Visual Studio user files
-.vs/
 # Ignore build artifacts
 bin/
 obj/
 # Ignore environment variable files
-.env
+.docker.env
 # Ignore log files
 *.log
 # Ignore temporary files
