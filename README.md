@@ -20,7 +20,7 @@ User Manager API with C# and EF
 
 ## Run PostgreSQL container
 
-`docker run -d --name container-name -p 5432:5432 --env-file=.docker.env`
+`docker run -d --name container-name -p 5432:5432 --env-file=.docker.env image-name`
 
 ### .docker.env file contains:
 
