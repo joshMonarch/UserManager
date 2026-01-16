@@ -1,6 +1,13 @@
-public enum Role
+﻿using System;
+using System.Collections.Generic;
+
+namespace UserManager.Models;
+
+public partial class Role
 {
-    Admin = 0,
-    User = 1,
-    Guest = 2
+    public int Id { get; set; }
+
+    public string Name { get; set; } = null!;
+
+    public virtual ICollection<User> Users { get; set; } = new List<User>();
 }
